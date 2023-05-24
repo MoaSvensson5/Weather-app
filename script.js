@@ -2,6 +2,7 @@ fetchWeather('madrid');
 fetchWeather('oslo');
 fetchWeather('angers');
 
+
 function fetchWeather(cityName) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=168d9181df63606a05cb22cddcc68f85&units=metric`)
     .then((response) => response.json())
@@ -16,12 +17,15 @@ function fetchWeather(cityName) {
         // Call fetchWeather() again after 30 minutes
         setTimeout(fetchWeather, 1800000);
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+        console.log(error);
+        alert("Something went wrong")
+    });
 }
-  
+
+
 let dateElement = document.getElementById("date");
 let timeElement = document.getElementById("time");
-
  
 function formatTime (date) {
     let hours = date.getHours();
@@ -39,6 +43,8 @@ function formatDate (date) {
     return `${DAYS[date.getDay()]}, ${MONTH[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
 
 }
+
+//Updating every second
 setInterval(() => {
     let now = new Date();
     timeElement.textContent = formatTime(now);
