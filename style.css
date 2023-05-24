@@ -1,0 +1,69 @@
+* {
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background:linear-gradient(135deg, #41c4bb, rgba(68, 31, 149, 0.53));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/*HEADER*/
+.sun img{
+    width:100px;
+    vertical-align: bottom;
+}
+h1 {
+    text-align: center;
+    font-size: 4em;
+    padding:50px 0 50px 0;
+}
+
+
+/*MAIN CONTENT - WEATHER*/
+.main {
+    margin:0 100px 0 100px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    flex:1;
+    padding: 20px;
+}
+h2 {
+    font-size: 2.2em;
+}
+.madrid, .oslo, .angers {
+    padding:100px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    background-color: rgba(56, 128, 128, 0.096);
+    border-radius: 20px; 
+    width:400px;
+    margin-bottom:50px;
+}
+.madrid p, .oslo p, .angers p {
+    font-size: 1em;
+}
+#madrid-temperature, #oslo-temperature, #angers-temperature {
+    font-size: 4em;
+}
+
+
+/*FOOTER*/
+.datetime {
+    font-size: 2.2em;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
